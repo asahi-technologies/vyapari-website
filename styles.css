@@ -70,7 +70,7 @@ nav a:hover {
 
 .hero {
     padding: 4rem 2rem;
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    background: linear-gradient(to right bottom, rgb(232, 244, 248), white);
 }
 
 .hero .container-main {
@@ -331,8 +331,9 @@ nav a:hover {
     justify-content: center;
     font-size: 1.8rem;
     color: #FF6B35;
-    font-weight: 700;
+    font-weight: 400;
     margin: 0 auto 1.5rem;
+    font-family: 'DM Serif Text', serif;
 }
 
 .step h3 {
@@ -567,13 +568,11 @@ nav a:hover {
 }
 
 .benefit-card {
-    display: flex;
     gap: 1.5rem;
     background: rgba(255, 255, 255, 0.1);
     padding: 2rem;
     border-radius: 1rem;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
@@ -594,6 +593,7 @@ nav a:hover {
     flex-shrink: 0;
     color: white;
     font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .benefit-content h3 {
