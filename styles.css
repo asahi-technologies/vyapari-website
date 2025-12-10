@@ -143,6 +143,16 @@ nav a:hover {
     align-items: center;
 }
 
+.hero-splash-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    border: 12px solid #042D46;
+    border-radius: 40px;
+}
+
 /* New phone mockup styles */
 .rounded-3xl {
     border-radius: 1.5rem;
@@ -1338,7 +1348,7 @@ footer {
 }
 
 .footer-left .footer-logo {
-    height: 25px;
+    height: 30px;
     width: auto;
 }
 
