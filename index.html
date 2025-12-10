@@ -541,7 +541,8 @@
             <h2>Start Growing Your Local Business Today</h2>
             <p>Fill out the form below and we'll get in touch with you soon.</p>
 
-            <form class="form-container">
+            <form class="form-container" id="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+                <input type="hidden" name="form-name" value="contact">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="firstName">First Name *</label>
@@ -585,7 +586,9 @@
                             placeholder="Tell us about your business and what services you offer..."></textarea>
                     </div>
                 </div>
-
+                <div class="form-row full">
+                    <div data-netlify-recaptcha="true"></div>
+                </div>
                 <div class="form-actions">
                     <button type="submit" class="cta-button">Create Your Profile</button>
                 </div>
@@ -596,28 +599,42 @@
     <!-- Footer -->
     <footer>
         <div class="container-main">
-            <div class="footer-content">
-                <div class="footer-section">
+            <div class="footer-flex">
+                <div class="footer-left">
                     <img src="./public/images/logo-white.png" alt="Vyapari Logo" class="footer-logo">
-                    <p>Empowering local businesses to serve their communities better.</p>
+                    <p class="footer-tagline">Empowering local businesses to serve their communities better.</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p>For support and inquiries, please fill out the form above or contact us through the app.</p>
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms-conditions.html">Terms & Conditions</a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Ekam Illam Private Limited. All rights reserved.</p>
+                <p>&copy; <span id="year"></span> Ekam Illam Private Limited. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <div id="confirmation-modal" class="modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-message">
+            <div class="modal-header">
+                <h2 id="modal-title">Done</h2>
+                <button class="close" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="modal-message">Thanks for contacting us!</p>
+            </div>
+            <div class="modal-footer">
+                <button id="modal-button" class="modal-button">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="./main.js"></script>
 </body>
 
 </html>
