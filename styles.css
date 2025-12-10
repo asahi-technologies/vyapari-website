@@ -1067,8 +1067,239 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
+/* ============================================
+   PRIVACY POLICY PAGE
+   ============================================ */
 
+.back-link {
+    color: #042d46;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #E55A24;
+}
+
+.policy-section {
+    padding: 4rem 2rem;
+    background: oklch(.985 .002 247.839);
+    min-height: calc(100vh - 200px);
+}
+
+.policy-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.policy-content h1 {
+    font-family: 'DM Serif Text', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #042D46;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.last-updated {
+    color: #888;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.policy-text {
+    line-height: 1.8;
+    color: #555;
+}
+
+.policy-text h2 {
+    font-family: 'DM Serif Text', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #042D46;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+.policy-text h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #042D46;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.policy-text p {
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.policy-text ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.policy-text li {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.policy-text strong {
+    color: #042D46;
+    font-weight: 600;
+}
+
+.policy-text a {
+    color: #FF6B35;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.policy-text a:hover {
+    color: #E55A24;
+    text-decoration: underline;
+}
+
+.disclaimer-note {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e0e0e0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Policy Footer */
+.policy-footer {
+    background: #0f1419;
+    color: #a0a8b5;
+    padding: 3rem 2rem;
+    margin-top: auto;
+}
+
+.policy-footer .container-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: #a0a8b5;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #FF6B35;
+}
+
+.policy-footer .footer-bottom {
+    border-top: 1px solid #1a2332;
+    padding-top: 1.5rem;
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+@media (max-width: 768px) {
+    .policy-section {
+        padding: 2rem 1rem;
+    }
+
+    .policy-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .policy-text h2 {
+        font-size: 1.3rem;
+    }
+
+    .policy-text h3 {
+        font-size: 1rem;
+    }
+
+    .back-link {
+        font-size: 0.85rem;
+    }
+
+    .footer-links {
+        gap: 1rem;
+    }
+
+    .footer-links a {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .policy-section {
+        padding: 1.5rem 1rem;
+    }
+
+    .policy-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .policy-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .policy-text h3 {
+        font-size: 0.95rem;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .back-link {
+        font-size: 0.8rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-links a {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    nav ul {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
     .hero-content h1 {
         font-size: 1.5rem;
     }
@@ -1085,4 +1316,59 @@ footer {
     .container-main {
         padding: 0 1rem;
     }
+}
+
+/* --- New Footer Layout (Left logo, Right links) --- */
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+
+.footer-left .footer-logo {
+    height: 25px;
+    width: auto;
+}
+
+.footer-right .footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-right .footer-links a {
+    color: #a0a8b5;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-right .footer-links a:hover {
+    color: #FF6B35;
+}
+
+/* --- Responsive Fix --- */
+@media (max-width: 768px) {
+    .footer-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-right .footer-links {
+        gap: 1rem;
+    }
+}
+
+.text-gray-700 {
+    color: oklch(.373 .034 259.733);
+    font-weight: 400;
+}
+
+.text-gray-900 {
+    color: oklch(.261 .047 261.411);
+    font-weight: 900;
 }
